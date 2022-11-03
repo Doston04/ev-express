@@ -11,7 +11,7 @@ var swiper2 = new Swiper(".heroSwiper", {
   },
   loop: true,
   autoplay: {
-    delay: 3000,
+    delay: 5000,
     disableOnInteraction: false,
   },
 });

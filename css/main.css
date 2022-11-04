@@ -33,10 +33,6 @@ a {
   color: currentColor;
 }
 
-a:hover {
-  color: currentColor !important;
-}
-
 p {
   margin: 0;
 }
@@ -87,12 +83,19 @@ p {
   border-right: 1px solid var(--light-gray);
 }
 
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 4;
+}
+
 .header_inner {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   height: 110px;
-  padding-inline-start: 0px;
+  padding-inline: 0px;
 }
 
 .header_blured {
@@ -106,17 +109,36 @@ p {
   padding-inline: 24px;
 }
 
+.hamburger_wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
 .hamburger {
   display: flex;
   flex-direction: column;
   gap: 10px;
   cursor: pointer;
+  padding: 14px;
 }
 
 .hamburger span {
   width: 40px;
   height: 1px;
   background-color: var(--white);
+  transition: 0.3s;
+}
+
+.rotate45deg {
+  position: absolute;
+  transform: rotate(45deg);
+  background-color: #000;
+}
+
+.rotate-45deg {
+  position: absolute;
+  transform: rotate(-45deg);
 }
 
 .logo {
@@ -124,6 +146,7 @@ p {
   width: 85px;
   height: 60px;
   display: inline-block;
+  transition: 0.3s;
 }
 
 .header_info {
@@ -131,7 +154,16 @@ p {
   justify-content: flex-end;
   align-items: center;
   gap: 40px;
-  grid-column: span 2 / span 2;
+  padding-right: 24px;
+}
+
+.mobileBorder {
+  border-right: 1px solid rgba(199, 199, 199, 0.4);
+  height: 100%;
+}
+
+.mobileBorder:last-child {
+  border-right: none;
 }
 
 .header_phone {
@@ -141,12 +173,19 @@ p {
   color: var(--white);
   display: inline-block;
   margin-top: 6px;
+  transition: 0.4s;
+}
+
+.header_phone:hover {
+  text-shadow: 3px 3px 20px rgba(255, 255, 255, 0.6);
+  transition: 0.4s;
 }
 
 .header_icon {
   width: 24px;
   height: 24px;
   color: var(--white);
+  transition: 0.3s;
 }
 
 .logo img {
@@ -157,6 +196,59 @@ p {
   height: 100%;
   object-fit: contain;
 }
+
+.mobile_header {
+  display: none;
+  transition: 0.3s;
+  animation: fadeIn 0.3s ease;
+  position: absolute;
+  left: 0;
+  top: 110px;
+  width: 100%;
+  z-index: 4;
+}
+
+.mobile_header_inner {
+  padding-inline: 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: var(--white);
+}
+
+.mobile_nav {
+  border-right: 1px solid rgba(199, 199, 199, 0.4);
+  padding-inline: 24px;
+  padding-top: 40px;
+}
+
+.mobile_nav:last-child {
+  border-right: none;
+}
+
+.mobile_navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  padding-block: 35px;
+}
+
+.mobile_nav_title {
+  font-size: 15px;
+  line-height: 18px;
+  color: var(--gray);
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(199, 199, 199, 0.4);
+  padding-bottom: 18px;
+}
+
+.mobile_nav_link {
+  font-size: 15px;
+  line-height: 18px;
+  color: var(--black);
+  text-transform: uppercase;
+  width: fit-content;
+}
+
 /* === FORM === */
 .form_section {
   background-color: #f6f6f6;
@@ -325,6 +417,96 @@ footer {
 
 .ft_link:hover {
   text-decoration: underline;
+}
+
+/* === TOP-BANNER === */
+.topBanner_section {
+  position: relative;
+  width: 100%;
+  max-height: 660px;
+  height: 100%;
+  /* border: 1px solid red; */
+}
+
+.topBanner_section .background div {
+  border-left: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.topBanner_section .background div:last-child {
+  border-right: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.topBanner_section .logo {
+  color: var(--white);
+}
+
+.topBanner_section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(17, 17, 17, 0.4);
+  z-index: -1;
+}
+
+.topBanner_section > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.topBanner_inner {
+  height: calc(660px - 110px);
+  padding-top: 110px;
+  padding-bottom: 48px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.topBanner_content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+
+.topBanner_nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.topBanner_nav_element {
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--white);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.topBanner_main_text {
+  font-family: "Bebas Neue 700";
+  font-size: 94px;
+  line-height: 94px;
+  color: var(--white);
+  max-width: 600px;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.topBanner_bottom_text {
+  font-size: 15px;
+  line-height: 18px;
+  color: var(--white);
 }
 
 @media (max-width: 1200px) {

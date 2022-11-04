@@ -1,0 +1,93 @@
+.contact_inner {
+  padding-block: 100px;
+  padding-inline: 0px;
+  display: flex;
+}
+
+.contact_inner_div {
+  width: 100%;
+  padding-inline: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.formDiv {
+  gap: 16px;
+}
+
+.contact_kv_div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact_k {
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.12em;
+  color: var(--gray);
+  text-transform: uppercase;
+}
+
+.contact_v {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+  color: var(--black);
+}
+
+.form_section_form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.form_section_form input {
+  padding: 24px 28px;
+  border: 1px solid #d7d7d7;
+}
+
+.form_section_form input:focus,
+.form_section_form button:focus,
+.form_section_form textarea:focus {
+  outline: none;
+}
+
+.form_section_form input::placeholder,
+.form_section_form button::placeholder,
+.form_section_form textarea::placeholder {
+  color: var(--gray);
+}
+
+.form_section_form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 18px;
+  gap: 15px;
+  padding: 20px;
+  width: 100%;
+  border: 1px solid var(--black);
+  background: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form_section_form button:hover {
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+.arrow {
+  width: 32px;
+  height: 24px;
+}
+
+.form_section_form textarea {
+  padding: 24px 28px;
+  border: 1px solid #d7d7d7;
+}

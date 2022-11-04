@@ -1,0 +1,163 @@
+.full_banner_section {
+  position: relative;
+  width: 100%;
+  height: 750px;
+}
+
+.full_banner_swiper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.fb_pagination_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.fb_slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.fb_slide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(17, 17, 17, 0.4);
+  z-index: -1;
+}
+
+.fb_slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.fb_pagination_inner {
+  position: relative;
+  max-height: 320px;
+  height: 100%;
+  padding-inline: 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.full_banner_pagination {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.full_banner_pagination_div {
+  padding-block: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.fb_pagination {
+  height: 32px !important;
+  display: flex;
+  align-items: center;
+  margin: 0 !important;
+  background: none !important;
+}
+
+.fb_pagination p {
+  font-size: 18px;
+  line-height: 22px;
+  padding-left: 20px;
+  cursor: pointer;
+  color: var(--white);
+  width: 100%;
+}
+
+.fb_pagination.swiper-slide-thumb-active {
+  background: none !important;
+  backdrop-filter: none !important;
+  position: relative;
+}
+
+.fb_pagination.swiper-slide-thumb-active::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background-color: var(--white);
+}
+
+.grid_third {
+  position: relative;
+  z-index: 3;
+  background-color: rgba(17, 17, 17, 0.6);
+}
+
+.fb_slide_content {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.fb_slide_content .section_mini_name {
+  color: var(--white);
+}
+
+.fb_slide_content .section_main_text {
+  color: var(--white);
+  margin-top: 28px;
+}
+
+.fb_desc_text {
+  font-size: 18px;
+  line-height: 32px;
+  color: var(--white);
+  margin-top: 16px;
+  max-width: 460px;
+  width: 100%;
+}
+
+.fb_slide_link {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 20px 40px;
+  border: 1px solid var(--white);
+  color: var(--white);
+  background-color: rgba(255, 255, 255, 0.16);
+  margin-top: 70px;
+  transition: 0.4s;
+}
+
+.fb_slide_link:hover {
+  color: var(--white) !important;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: 0.4s;
+}
+
+.slide_title {
+  font-family: "Bebas Neue 700";
+  font-size: 94px;
+  line-height: 94px;
+  color: var(--white);
+  max-width: 470px;
+  margin-top: 28px;
+}

@@ -461,8 +461,13 @@
           <div class="contact_inner_div formDiv">
             <p class="section_main_text">Получите Консультацию</p>
             <form class="form_section_form">
-              <input type="text" placeholder="имя" />
-              <input type="text" placeholder="телефон" />
+              <input type="text" placeholder="имя" required />
+              <input
+                type="text"
+                placeholder="телефон"
+                id="phone-mask"
+                required
+              />
               <textarea cols="30" rows="6" placeholder="Вопросы"></textarea>
               <button type="submit">
                 <span>Отправит'</span>
@@ -611,5 +616,11 @@
       crossorigin="anonymous"
     ></script>
     <script src="./js/scripts.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script>
+      var phoneMask = IMask(document.getElementById("phone-mask"), {
+        mask: "+{998}(00) 000-00-00",
+      });
+    </script>
   </body>
 </html>

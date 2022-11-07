@@ -1,13 +1,13 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 @import "./full-banner.css";
+@import "./product.css";
 
 :root {
   --black: #111;
   --gray: #757575;
   --white: #fff;
   --light-gray: #d7d7d7;
-  /* --light-gray: #f6f6f6; */
 }
 
 @font-face {
@@ -352,7 +352,8 @@ header {
 }
 
 .form_section_form button:hover {
-  background-color: #fff;
+  background-color: var(--black);
+  color: var(--white);
   transition: 0.3s;
 }
 
@@ -573,11 +574,17 @@ footer {
   line-height: 24px;
   color: var(--black);
   transition: 0.3s;
+  background-color: unset;
 }
 
 .centeredBtn:hover {
   background-color: var(--black);
   color: var(--white);
+  transition: 0.3s;
+}
+
+.centeredBtn:active {
+  transform: scale(0.95);
   transition: 0.3s;
 }
 
@@ -594,6 +601,10 @@ footer {
   .section_main_big_text {
     font-size: 56px;
     line-height: 70px;
+  }
+  .form_section_form input,
+  .form_section_form button {
+    padding: 0px 20px;
   }
 }
 
@@ -620,6 +631,18 @@ footer {
   .section_main_big_text {
     font-size: 48px;
     line-height: 60px;
+  }
+  .form_inner {
+    grid-template-columns: 1fr;
+    padding-block: 55px;
+  }
+  .form_section_form input,
+  .form_section_form button {
+    padding: 20px 30px;
+  }
+  .form_info_bottomText {
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
@@ -746,6 +769,16 @@ footer {
     line-height: 18px;
     border-top: 1px solid rgba(199, 199, 199, 0.4);
   }
+  .mobile_hidden {
+    display: none;
+  }
+  .form_section_form {
+    display: flex;
+    flex-direction: column;
+  }
+  .form_info_div {
+    gap: 16px;
+  }
 }
 
 @media (max-width: 580px) {
@@ -775,6 +808,12 @@ footer {
   .section_main_big_text {
     font-size: 32px;
     line-height: 48px;
+  }
+  .form_info_div {
+    gap: 10px;
+  }
+  .form_info_bottomText {
+    font-size: 14px;
   }
 }
 

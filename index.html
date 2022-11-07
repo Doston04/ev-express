@@ -537,7 +537,9 @@
           <div class="about_2fr">
             <div class="about_texts_div">
               <p class="section_mini_name">О нас</p>
-              <p class="about_main_text">Автомобильная компания EV-express</p>
+              <p class="section_main_big_text">
+                Автомобильная компания EV-express
+              </p>
               <p class="about_main_desc">
                 Ev-express – это первый в мире спортивный кроссовер, сочетающий
                 душу суперкара и функциональность внедорожника. Urus, оснащенный
@@ -940,39 +942,52 @@
                   <div class="product_content">
                     <div class="product_info_container">
                       <div class="product_texts">
-                        <p class="product_price">480 000 000 sum</p>
-                        <p class="product_title">Cadillac Lyriq</p>
+                        <div class="product_title">
+                          <p>Cadillac Lyriq</p>
+                        </div>
+                        <div class="product_price">
+                          <p class="cena_static">Цена от:</p>
+                          <div class="cena_dynamic">
+                            <p>480 000 000 sum</p>
+                          </div>
+                        </div>
                       </div>
-                      <svg
-                        class="product_icon"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M11.9897 15.7961V11.3771"
-                          stroke="#757575"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M11.9899 8.20432H11.9999"
-                          stroke="#757575"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M16.3345 2.75021H7.66549C4.64449 2.75021 2.75049 4.88921 2.75049 7.91621V16.0842C2.75049 19.1112 4.63549 21.2502 7.66549 21.2502H16.3335C19.3645 21.2502 21.2505 19.1112 21.2505 16.0842V7.91621C21.2505 4.88921 19.3645 2.75021 16.3345 2.75021Z"
-                          stroke="#757575"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
+                      <div class="product_icon_div">
+                        <svg
+                          class="product_icon"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M11.9897 15.7961V11.3771"
+                            stroke="#757575"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M11.9899 8.20432H11.9999"
+                            stroke="#757575"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M16.3345 2.75021H7.66549C4.64449 2.75021 2.75049 4.88921 2.75049 7.91621V16.0842C2.75049 19.1112 4.63549 21.2502 7.66549 21.2502H16.3335C19.3645 21.2502 21.2505 19.1112 21.2505 16.0842V7.91621C21.2505 4.88921 19.3645 2.75021 16.3345 2.75021Z"
+                            stroke="#757575"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <p class="product_info_popUp">
+                          Lorem ipsum dolor sit, amet consectetur adipisicing
+                          elit. Repellendus, ab?
+                        </p>
+                      </div>
                     </div>
                     <div class="product_link">
                       <p>Подробнее</p>
@@ -2213,6 +2228,9 @@
               </div>
             </div>
           </div>
+          <div class="centeredBtn_div">
+            <a href="./products.html" class="centeredBtn">Показать всё</a>
+          </div>
           <div class="background">
             <div></div>
             <div></div>
@@ -2231,9 +2249,9 @@
             </p>
           </div>
           <form class="form_section_form">
-            <input type="text" placeholder="имя" />
-            <input type="text" placeholder="телефон" />
-            <p></p>
+            <input type="text" placeholder="имя" required />
+            <input id="phone-mask" type="text" placeholder="телефон" required />
+            <p class="mobile_hidden"></p>
             <button type="submit">
               <span>Отправит'</span>
               <svg
@@ -2528,5 +2546,11 @@
     <script src="./js/heroSwiper.js"></script>
     <script src="./js/quotes.js"></script>
     <script src="./js/fullBanner.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script>
+      var phoneMask = IMask(document.getElementById("phone-mask"), {
+        mask: "+{998}(00) 000-00-00",
+      });
+    </script>
   </body>
 </html>

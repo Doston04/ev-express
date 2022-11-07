@@ -78,7 +78,8 @@
 }
 
 .form_section_form button:hover {
-  background-color: #fff;
+  background-color: var(--black);
+  color: var(--white);
   transition: 0.3s;
 }
 

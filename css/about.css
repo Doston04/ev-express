@@ -247,6 +247,7 @@
   font-weight: 500;
   color: var(--black);
   text-align: left;
+  border: 1px solid transparent !important;
 }
 
 .faq_container .nav-link.active {
@@ -325,7 +326,8 @@
 }
 
 .faq_container_mobile .accordion_plus_div {
-  width: 34px;
+  max-width: 34px;
+  width: 100%;
   height: 34px;
   border: 1px solid var(--light-gray);
   display: grid;

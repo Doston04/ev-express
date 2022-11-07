@@ -285,6 +285,10 @@ header {
   background-color: #f6f6f6;
 }
 
+.form_section .section_mini_name {
+  color: rgba(17, 17, 17, 0.8);
+}
+
 .form_inner {
   display: grid;
   grid-template-columns: 0.45fr 0.65fr;
@@ -309,7 +313,8 @@ header {
 .form_info_bottomText {
   font-size: 18px;
   line-height: 32px;
-  color: var(--gray);
+  color: rgba(17, 17, 17, 0.8);
+  /* color: var(--gray); */
 }
 
 .form_section_form {

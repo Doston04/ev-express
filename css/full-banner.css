@@ -212,9 +212,9 @@
     line-height: 48px;
   }
   .fb_slide_link {
-    padding: 20px 30px;
-    font-size: 15px;
-    line-height: 18px;
+    padding: 20px;
+    font-size: 14px;
+    line-height: 16px;
     gap: 20px;
   }
   .fb_desc_text {
@@ -226,8 +226,6 @@
 @media (max-width: 400px) {
   .fb_slide_link {
     padding: 16px;
-    font-size: 14px;
-    line-height: 16px;
     gap: 10px;
   }
 }

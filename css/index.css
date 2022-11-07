@@ -604,6 +604,9 @@ header {
 }
 
 @media (max-width: 580px) {
+  .hs_slide_content_inenr {
+    padding-top: 50px;
+  }
   .hs_slide_title {
     font-size: 48px;
     line-height: 48px;

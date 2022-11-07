@@ -91,3 +91,25 @@
   padding: 24px 28px;
   border: 1px solid #d7d7d7;
 }
+
+@media (max-width: 1024px) {
+  .form_section_form input,
+  .form_section_form textarea {
+    padding: 16px;
+  }
+  .contact_inner_div {
+    padding-inline: 14px;
+  }
+}
+
+@media (max-width: 880px) {
+  .contact_inner {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 55px;
+    padding-block: 60px;
+  }
+  .contact_inner_div {
+    padding-inline: 54px;
+  }
+}

@@ -51,7 +51,7 @@
   position: relative;
   max-height: 320px;
   height: 100%;
-  padding-inline: 0px;
+  padding-inline: 0px !important;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -145,6 +145,7 @@
   background-color: rgba(255, 255, 255, 0.16);
   margin-top: 70px;
   transition: 0.4s;
+  text-transform: uppercase;
 }
 
 .fb_slide_link:hover {
@@ -160,4 +161,73 @@
   color: var(--white);
   max-width: 470px;
   margin-top: 28px;
+}
+
+@media (max-width: 1024px) {
+  .slide_title {
+    font-size: 80px;
+    line-height: 80px;
+  }
+  .fb_slide_link {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 880px) {
+  .fb_pagination_inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    max-height: 100%;
+    height: 100%;
+  }
+  .grid_third {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: none;
+    max-height: 200px;
+    height: 100%;
+  }
+  .full_banner_pagination_div {
+    padding-top: 30px;
+    padding-bottom: 0px;
+    height: 100%;
+  }
+  .full_banner_pagination {
+    background-color: rgba(17, 17, 17, 0.6);
+  }
+  .fb_pagination,
+  .fb_slide_content {
+    padding-inline: 54px !important;
+  }
+  .fb_pagination.swiper-slide-thumb-active::after {
+    left: 40px;
+  }
+}
+
+@media (max-width: 580px) {
+  .slide_title {
+    font-size: 48px;
+    line-height: 48px;
+  }
+  .fb_slide_link {
+    padding: 20px 30px;
+    font-size: 15px;
+    line-height: 18px;
+    gap: 20px;
+  }
+  .fb_desc_text {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+
+@media (max-width: 400px) {
+  .fb_slide_link {
+    padding: 16px;
+    font-size: 14px;
+    line-height: 16px;
+    gap: 10px;
+  }
 }

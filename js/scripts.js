@@ -9,43 +9,88 @@ const span3 = document.querySelector("#span3");
 const header_phone = document.querySelector(".header_phone");
 const icons = document.querySelectorAll(".header_icon");
 const divs = document.querySelectorAll(".mobileBorderDiv");
+const langChanger = document.querySelector(".langChanger");
+const bluredHeader = document.querySelector(".header_blured");
 
 let clicked = false;
-const handleMobileMenu = () => {
-  if (clicked) {
-    mobileHeader.style.display = "none";
-    header.style.backgroundColor = "unset";
-    logo.style.color = "#fff";
-    span1.classList.remove("rotate45deg");
-    span1.style.backgroundColor = "#fff";
-    span3.classList.remove("rotate-45deg");
-    span3.style.backgroundColor = "#fff";
-    header_phone.style.color = "#fff";
-    icons.forEach((icon) => {
-      icon.style.color = "#fff";
-    });
-    divs.forEach((div) => {
-      div.classList.remove("mobileBorder");
-    });
-    clicked = false;
-  } else {
-    mobileHeader.style.display = "block";
-    header.style.backgroundColor = "#fff";
-    logo.style.color = "#000";
-    header.style.color = "#000";
-    span1.classList.add("rotate45deg");
-    span1.style.backgroundColor = "#000";
-    span3.classList.add("rotate-45deg");
-    span3.style.backgroundColor = "#000";
-    header_phone.style.color = "#000";
-    icons.forEach((icon) => {
-      icon.style.color = "#000";
-    });
-    divs.forEach((div) => {
-      div.classList.add("mobileBorder");
-    });
-    clicked = true;
-  }
-};
+if (window.innerWidth > 880) {
+  const handleMobileMenu = () => {
+    if (clicked) {
+      mobileHeader.style.display = "none";
+      header.style.backgroundColor = "unset";
+      logo.style.color = "#fff";
+      span1.classList.remove("rotate45deg");
+      span1.style.backgroundColor = "#fff";
+      span3.classList.remove("rotate-45deg");
+      span3.style.backgroundColor = "#fff";
+      header_phone.style.color = "#fff";
+      icons.forEach((icon) => {
+        icon.style.color = "#fff";
+      });
+      divs.forEach((div) => {
+        div.classList.remove("mobileBorder");
+      });
+      langChanger.style.display = "none";
+      clicked = false;
+    } else {
+      mobileHeader.style.display = "block";
+      header.style.backgroundColor = "#fff";
+      logo.style.color = "#000";
+      header.style.color = "#000";
+      span1.classList.add("rotate45deg");
+      span1.style.backgroundColor = "#000";
+      span3.classList.add("rotate-45deg");
+      span3.style.backgroundColor = "#000";
+      header_phone.style.color = "#000";
+      icons.forEach((icon) => {
+        icon.style.color = "#000";
+      });
+      divs.forEach((div) => {
+        div.classList.add("mobileBorder");
+      });
+      langChanger.style.display = "block";
+      clicked = true;
+    }
+  };
 
-hamburger.addEventListener("click", handleMobileMenu);
+  hamburger.addEventListener("click", handleMobileMenu);
+} else if (window.innerWidth < 880) {
+  const handleMobileMenu = () => {
+    if (clicked) {
+      mobileHeader.style.display = "none";
+      bluredHeader.style.backgroundColor = "rgba(255, 255, 255, 0.16)";
+      logo.style.color = "#fff";
+      span1.classList.remove("rotate45deg");
+      span1.style.backgroundColor = "#fff";
+      span3.classList.remove("rotate-45deg");
+      span3.style.backgroundColor = "#fff";
+      header_phone.style.color = "#fff";
+      icons.forEach((icon) => {
+        icon.style.color = "#fff";
+      });
+      divs.forEach((div) => {
+        div.classList.remove("mobileBorder");
+      });
+      clicked = false;
+    } else {
+      mobileHeader.style.display = "block";
+      bluredHeader.style.backgroundColor = "#fff";
+      logo.style.color = "#000";
+      header.style.color = "#000";
+      span1.classList.add("rotate45deg");
+      span1.style.backgroundColor = "#000";
+      span3.classList.add("rotate-45deg");
+      span3.style.backgroundColor = "#000";
+      header_phone.style.color = "#000";
+      icons.forEach((icon) => {
+        icon.style.color = "#000";
+      });
+      divs.forEach((div) => {
+        div.classList.add("mobileBorder");
+      });
+      clicked = true;
+    }
+  };
+
+  hamburger.addEventListener("click", handleMobileMenu);
+}

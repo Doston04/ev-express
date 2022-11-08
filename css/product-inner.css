@@ -435,6 +435,56 @@ a.navigation_node:hover {
   background-color: #000;
 }
 
+#black_swiper .section_main_text {
+  color: var(--white);
+}
+
+#black_swiper .ms_btn {
+  border: 1px solid var(--white);
+}
+
+#black_swiper .ms_btn svg {
+  color: var(--white);
+}
+
+.swiper_head {
+  padding-top: 55px;
+  display: none;
+}
+
+.section_desc_p {
+  font-size: 14px;
+  line-height: 28px;
+  color: var(--gray);
+  margin-top: 12px;
+}
+
+.mainSwiper_buttons {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.ms_btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--gray);
+  display: grid;
+  place-items: center;
+  transform: rotate(45deg);
+  transition: 0.3s;
+}
+
+.ms_btn svg {
+  color: var(--gray);
+  transform: rotate(-45deg);
+}
+
+#prevMS {
+  transform: rotate(225deg);
+}
+
 @media (max-width: 1800px) {
   .gallery_section {
     height: 500px;
@@ -569,12 +619,16 @@ a.navigation_node:hover {
 }
 
 @media (max-width: 580px) {
+  .swiper_head {
+    display: block;
+  }
   .mainSwiper_slide {
     height: 180px;
   }
   .mainSwiper_slide p {
     font-size: 14px;
     line-height: 24px;
+    padding: 12px;
   }
   .currentPage p {
     font-size: 32px;

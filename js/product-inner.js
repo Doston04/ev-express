@@ -73,12 +73,15 @@ if (window.innerWidth > 880) {
 
 var mainSwiper = new Swiper(".mainSwiper", {
   breakpoints: {
+    600: {
+      slidesPerView: 1.2,
+    },
     1200: {
       slidesPerView: 1.5,
       spaceBetween: 24,
     },
   },
-  slidesPerView: 1.2,
+  slidesPerView: 1,
   spaceBetween: 24,
   autoplay: {
     delay: 5000,
@@ -86,6 +89,10 @@ var mainSwiper = new Swiper(".mainSwiper", {
   },
   loop: true,
   speed: 1600,
+  navigation: {
+    prevEl: "#prevMS",
+    nextEl: "#nextMS",
+  },
 });
 
 var otherCarsSwiper = new Swiper(".otherCarsSwiper", {

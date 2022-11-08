@@ -480,33 +480,25 @@
         <div class="swiper_section_inner">
           <div class="swiper mainSwiper">
             <div class="swiper-wrapper">
-              <div
-                data-title="Черный хрустальный щит и светодиодные фар."
-                class="swiper-slide mainSwiper_slide"
-              >
+              <div class="swiper-slide mainSwiper_slide">
                 <img src="./media/ms-1.png" alt="mainSwiper slide" />
-                <p>Черный хрустальный щит и светодиодные фар.</p>
+                <p title="swiperImage1">
+                  Черный хрустальный щит и светодиодные фар.
+                </p>
               </div>
-              <div
-                data-title="Светодиодные лампы"
-                class="swiper-slide mainSwiper_slide"
-              >
+              <div class="swiper-slide mainSwiper_slide">
                 <img src="./media/ms-2.png" alt="mainSwiper slide" />
-                <p>Светодиодные лампы</p>
+                <p title="swiperImage2">Светодиодные лампы</p>
               </div>
-              <div
-                data-title="33 дюйм диагональный светодиодный дисплей"
-                class="swiper-slide mainSwiper_slide"
-              >
+              <div class="swiper-slide mainSwiper_slide">
                 <img src="./media/ms-1.png" alt="mainSwiper slide" />
-                <p>33 дюйм диагональный светодиодный дисплей</p>
+                <p title="swiperImage3">
+                  33 дюйм диагональный светодиодный дисплей
+                </p>
               </div>
-              <div
-                data-title="Просторный интерьер"
-                class="swiper-slide mainSwiper_slide"
-              >
+              <div class="swiper-slide mainSwiper_slide">
                 <img src="./media/ms-2.png" alt="mainSwiper slide" />
-                <p>Просторный интерьер</p>
+                <p title="swiperImage4">Просторный интерьер</p>
               </div>
             </div>
           </div>
@@ -515,21 +507,30 @@
       <section class="gallery_section">
         <div class="gallery_main">
           <div class="gallery_photo">
-            <img src="./media/g-main.png" alt="gallery main photo" />
+            <img
+              title="mainPhoto"
+              src="./media/g-main.png"
+              alt="gallery main photo"
+            />
           </div>
         </div>
         <div class="gallery_grid">
           <div class="gallery_photo">
-            <img src="./media/g-grid1.png" alt="gallery photo" />
+            <img title="photo1" src="./media/g-grid1.png" alt="gallery photo" />
           </div>
           <div class="gallery_photo">
-            <img src="./media/g-grid2.png" alt="gallery photo" />
+            <img title="photo2" src="./media/g-grid2.png" alt="gallery photo" />
           </div>
           <div class="gallery_photo">
-            <img src="./media/g-grid3.png" alt="gallery photo" />
+            <img title="photo3" src="./media/g-grid3.png" alt="gallery photo" />
           </div>
           <div class="gallery_photo">
-            <img src="./media/g-grid4.png" alt="gallery photo" />
+            <img title="photo4" src="./media/g-grid4.png" alt="gallery photo" />
+          </div>
+        </div>
+        <div class="absolute_text_section">
+          <div class="container absolute_text_inner">
+            <p class="section_main_text">ГАЛЕРЕЯ</p>
           </div>
         </div>
       </section>
@@ -609,33 +610,25 @@
         <div class="swiper_section_inner">
           <div class="swiper mainSwiper">
             <div class="swiper-wrapper">
-              <div
-                data-title="Черный хрустальный щит и светодиодные фар."
-                class="swiper-slide mainSwiper_slide"
-              >
+              <div class="swiper-slide mainSwiper_slide">
                 <img src="./media/ms-1.png" alt="mainSwiper slide" />
-                <p>Черный хрустальный щит и светодиодные фар.</p>
+                <p title="swiperImage1">
+                  Черный хрустальный щит и светодиодные фар.
+                </p>
               </div>
-              <div
-                data-title="Светодиодные лампы"
-                class="swiper-slide mainSwiper_slide"
-              >
+              <div class="swiper-slide mainSwiper_slide">
                 <img src="./media/ms-2.png" alt="mainSwiper slide" />
-                <p>Светодиодные лампы</p>
+                <p title="swiperImage2">Светодиодные лампы</p>
               </div>
-              <div
-                data-title="33 дюйм диагональный светодиодный дисплей"
-                class="swiper-slide mainSwiper_slide"
-              >
+              <div class="swiper-slide mainSwiper_slide">
                 <img src="./media/ms-1.png" alt="mainSwiper slide" />
-                <p>33 дюйм диагональный светодиодный дисплей</p>
+                <p title="swiperImage3">
+                  33 дюйм диагональный светодиодный дисплей
+                </p>
               </div>
-              <div
-                data-title="Просторный интерьер"
-                class="swiper-slide mainSwiper_slide"
-              >
+              <div class="swiper-slide mainSwiper_slide">
                 <img src="./media/ms-2.png" alt="mainSwiper slide" />
-                <p>Просторный интерьер</p>
+                <p title="swiperImage4">Просторный интерьер</p>
               </div>
             </div>
           </div>
@@ -1257,6 +1250,26 @@
               />
             </svg>
           </div>
+        </div>
+      </div>
+      <div class="imgModal">
+        <div class="imgContent">
+          <img id="imgContent_image" src="" alt="gallery photo" />
+          <div class="img_x_btn">
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 29 29"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.18537 5.44112C4.10291 5.35866 4.03751 5.26078 3.99288 5.15305C3.94826 5.04532 3.92529 4.92985 3.92529 4.81324C3.92529 4.69664 3.94826 4.58117 3.99288 4.47344C4.03751 4.36571 4.10291 4.26782 4.18537 4.18537C4.26782 4.10291 4.36571 4.03751 4.47344 3.99288C4.58117 3.94826 4.69664 3.92529 4.81324 3.92529C4.92985 3.92529 5.04532 3.94826 5.15305 3.99288C5.26078 4.03751 5.35866 4.10291 5.44112 4.18537L14.5684 13.3144L23.6956 4.18537C23.7781 4.10291 23.876 4.03751 23.9837 3.99288C24.0914 3.94826 24.2069 3.92529 24.3235 3.92529C24.4401 3.92529 24.5556 3.94826 24.6633 3.99288C24.771 4.03751 24.8689 4.10291 24.9514 4.18537C25.0338 4.26782 25.0992 4.36571 25.1439 4.47344C25.1885 4.58117 25.2114 4.69664 25.2114 4.81324C25.2114 4.92985 25.1885 5.04532 25.1439 5.15305C25.0992 5.26078 25.0338 5.35866 24.9514 5.44112L15.8223 14.5684L24.9514 23.6956C25.0338 23.7781 25.0992 23.876 25.1439 23.9837C25.1885 24.0914 25.2114 24.2069 25.2114 24.3235C25.2114 24.4401 25.1885 24.5556 25.1439 24.6633C25.0992 24.771 25.0338 24.8689 24.9514 24.9514C24.8689 25.0338 24.771 25.0992 24.6633 25.1439C24.5556 25.1885 24.4401 25.2114 24.3235 25.2114C24.2069 25.2114 24.0914 25.1885 23.9837 25.1439C23.876 25.0992 23.7781 25.0338 23.6956 24.9514L14.5684 15.8223L5.44112 24.9514C5.35866 25.0338 5.26078 25.0992 5.15305 25.1439C5.04532 25.1885 4.92985 25.2114 4.81324 25.2114C4.69664 25.2114 4.58117 25.1885 4.47344 25.1439C4.36571 25.0992 4.26782 25.0338 4.18537 24.9514C4.10291 24.8689 4.03751 24.771 3.99288 24.6633C3.94826 24.5556 3.92529 24.4401 3.92529 24.3235C3.92529 24.2069 3.94826 24.0914 3.99288 23.9837C4.03751 23.876 4.10291 23.7781 4.18537 23.6956L13.3144 14.5684L4.18537 5.44112Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+          <p id="modal_text"></p>
         </div>
       </div>
     </main>

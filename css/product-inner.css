@@ -46,7 +46,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-block: 100px;
+  padding-top: 100px;
+  padding-bottom: 80px;
   z-index: 1;
 }
 
@@ -155,6 +156,7 @@ a.navigation_node:hover {
   width: 100%;
   height: 100%;
   position: relative;
+  cursor: pointer;
 }
 
 .gallery_photo img {
@@ -164,6 +166,20 @@ a.navigation_node:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.absolute_text_section {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+.absolute_text_inner {
+  padding-top: 40px;
+}
+
+.absolute_text_section p {
+  color: var(--white);
 }
 
 .other_inner {
@@ -359,7 +375,7 @@ a.navigation_node:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -2;
+  z-index: 0;
 }
 
 .mainSwiper_slide::after {
@@ -370,7 +386,7 @@ a.navigation_node:hover {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
-  z-index: -1;
+  z-index: 1;
 }
 
 .mainSwiper_slide p {
@@ -382,6 +398,12 @@ a.navigation_node:hover {
   height: 100%;
   display: flex;
   align-items: flex-end;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .modal {
@@ -389,6 +411,7 @@ a.navigation_node:hover {
   place-items: center;
   background-color: rgba(0, 0, 0, 0.6);
   animation: fadeIn 0.4s ease;
+  padding-inline: 20px;
 }
 
 .modal_content {
@@ -400,12 +423,13 @@ a.navigation_node:hover {
   background-color: var(--white);
   padding: 120px;
   position: relative;
+  margin-inline: 20px;
 }
 
 .modal_x_div {
   position: absolute;
-  top: -40px;
-  right: -40px;
+  top: -60px;
+  right: -60px;
   width: 60px;
   height: 60px;
   border: 1px solid var(--white);
@@ -485,6 +509,61 @@ a.navigation_node:hover {
   transform: rotate(225deg);
 }
 
+.imgModal {
+  display: none;
+  place-items: center;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  animation: fadeIn ease 0.4s;
+}
+
+.img_x_btn {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--black);
+  border: 1px solid var(--white);
+  display: grid;
+  place-items: center;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.img_x_btn svg {
+  transform: rotate(-45deg);
+}
+
+.imgContent {
+  position: relative;
+  max-width: 80%;
+  margin: 0 auto;
+  width: 100%;
+  height: 70vh;
+}
+
+.imgContent img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imgContent p {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  color: var(--white);
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+}
+
 @media (max-width: 1800px) {
   .gallery_section {
     height: 500px;
@@ -527,6 +606,9 @@ a.navigation_node:hover {
   .video_section .section_main_text {
     padding-top: 80px;
   }
+  .imgContent {
+    height: 40vh;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -547,9 +629,20 @@ a.navigation_node:hover {
   .buy_btn {
     grid-column: span 2 / span 2;
   }
+  .imgContent p {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 @media (max-width: 880px) {
+  .modal_x_div {
+    top: -30px;
+    right: 10px;
+  }
+  .modal_content {
+    padding-inline: 30px;
+  }
   .swiper_section_inner {
     padding-left: 0px;
     padding-inline: 24px;
@@ -616,9 +709,18 @@ a.navigation_node:hover {
   .otherCars_buttons {
     display: none;
   }
+  .imgContent {
+    height: 240px;
+  }
 }
 
 @media (max-width: 580px) {
+  .img_x_btn {
+    width: 40px;
+    height: 40px;
+    top: -20px;
+    right: -20px;
+  }
   .swiper_head {
     display: block;
   }
@@ -660,6 +762,9 @@ a.navigation_node:hover {
   .navigation_node {
     font-size: 14px;
     line-height: 24px;
+  }
+  .imgContent p {
+    bottom: -30px;
   }
 }
 

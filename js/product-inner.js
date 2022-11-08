@@ -137,3 +137,69 @@ window.addEventListener("click", (e) => {
     modal.style.display = "grid";
   }
 });
+
+const imgModal = document.querySelector(".imgModal");
+const content = document.querySelector(".imgContent");
+const imagePolya = document.querySelector("#imgContent_image");
+const gallery = document.querySelectorAll(".gallery_photo");
+
+gallery.forEach((photo) => {
+  photo.addEventListener("click", (e) => {
+    imgModal.style.display = "grid";
+    const element = e.target.getAttribute("title");
+    const text = document.querySelector("#modal_text");
+    text.innerHTML = "";
+    if (element == "mainPhoto") {
+      imagePolya.setAttribute("src", "./media/g-main.png");
+    } else if (element == "photo1") {
+      imagePolya.setAttribute("src", "./media/g-grid1.png");
+    } else if (element == "photo2") {
+      imagePolya.setAttribute("src", "./media/g-grid2.png");
+    } else if (element == "photo3") {
+      imagePolya.setAttribute("src", "./media/g-grid3.png");
+    } else if (element == "photo4") {
+      imagePolya.setAttribute("src", "./media/g-grid4.png");
+    }
+  });
+});
+
+const swiperImages = document.querySelectorAll(".mainSwiper_slide");
+swiperImages.forEach((img) => {
+  img.addEventListener("click", (e) => {
+    imgModal.style.display = "grid";
+    const text = document.querySelector("#modal_text");
+    text.innerHTML = "";
+    const element = e.target.getAttribute("title");
+    if (element == "swiperImage1") {
+      imagePolya.setAttribute("src", "./media/ms-1.png");
+      text.innerHTML = "33 дюйм диагональный светодиодный дисплей";
+      content.append(text);
+    } else if (element == "swiperImage2") {
+      imagePolya.setAttribute("src", "./media/ms-2.png");
+      text.innerHTML = "Черный хрустальный щит и светодиодные фар.";
+      content.append(text);
+    } else if (element == "swiperImage3") {
+      imagePolya.setAttribute("src", "./media/ms-1.png");
+      text.innerHTML = "Светодиодные лампы";
+      content.append(text);
+    } else if (element == "swiperImage4") {
+      imagePolya.setAttribute("src", "./media/ms-2.png");
+      text.innerHTML = "Просторный интерьер";
+      content.append(text);
+    }
+  });
+});
+
+const img_x_btn = document.querySelector(".img_x_btn");
+
+img_x_btn.addEventListener("click", () => {
+  imgModal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target == imgModal) {
+    imgModal.style.display = "none";
+  } else if (e.target == imagePolya) {
+    imgModal.style.display = "grid";
+  }
+});

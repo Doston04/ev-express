@@ -234,6 +234,15 @@
 }
 
 @media (max-width: 580px) {
+  .product {
+    height: auto;
+  }
+  .product:hover {
+    padding-top: 0px;
+  }
+  .product_img {
+    height: 220px;
+  }
   .products_inner {
     gap: 0;
   }

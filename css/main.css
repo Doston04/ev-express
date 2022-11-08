@@ -131,6 +131,7 @@ header {
   gap: 10px;
   cursor: pointer;
   padding: 14px 0;
+  width: 40px;
 }
 
 .hamburger span {
@@ -332,7 +333,8 @@ header {
 }
 
 .form_section_form input:focus,
-.form_section_form button:focus {
+.form_section_form button:focus,
+.form_section_form textarea:focus {
   outline: none;
 }
 
